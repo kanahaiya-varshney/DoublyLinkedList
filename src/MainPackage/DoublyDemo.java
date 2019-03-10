@@ -23,5 +23,7 @@ public class DoublyDemo {
         obj.displayFirst();
         obj.deleteFirst();
         obj.displayFirst();
+        obj.deleteLast();
+        obj.displayFirst();
     }
 }

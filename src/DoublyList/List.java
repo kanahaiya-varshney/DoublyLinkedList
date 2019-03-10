@@ -31,7 +31,7 @@ public class List {
 
     public void displayFirst() {
         Link temp = first;
-        System.out.println("First<-->Last");
+        System.out.print("First<-->Last ::");
         while (temp != null) {
             System.out.print(temp.getData() + "<-->");
             temp = temp.getNext();
@@ -43,7 +43,7 @@ public class List {
 
     public void displayLast() {
         Link temp = last;
-        System.out.println("Last<-->First");
+        System.out.println("Last<-->First ::");
         while (temp != null) {
             System.out.print(temp.getData() + "<-->");
             temp = temp.getPrevious();
@@ -71,6 +71,16 @@ public class List {
     public void deleteLast(){
         if(first==null){
             System.out.println("No data");
+            return;
+        }
+        System.out.println("Deleted Data:"+last.getData()+"");
+        if(first.getNext()==null){
+            last=null;
+            first=null;
+        }
+        else{
+            last=last.getPrevious();
+            last.setNext(null);
         }
     }
 }
