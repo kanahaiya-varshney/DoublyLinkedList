@@ -57,6 +57,7 @@ public class List {
             System.out.println("No data");
             return ;
         }
+        System.out.println("Deleted data:"+first.getData()+"");
         if (first.getNext() == null) {
             last = null;
             first=null;
@@ -66,5 +67,10 @@ public class List {
             first.setPrevious(null);
         }
 
+    }
+    public void deleteLast(){
+        if(first==null){
+            System.out.println("No data");
+        }
     }
 }
